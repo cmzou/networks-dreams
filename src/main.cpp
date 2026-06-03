@@ -21,8 +21,8 @@ int main() {
     // Uncomment each block as you implement the corresponding methods.
     // -------------------------------------------------------------------------
 
-    // Matrixf m(3, 4);
-    // m.print("empty 3x4");
+    Matrixf m(3, 4);
+    m.print("empty 3x4");
 
     // -------------------------------------------------------------------------
     // Checkpoint 2 — fill & operator()

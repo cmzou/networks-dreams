@@ -28,12 +28,18 @@ public:
     // Default constructor — creates an empty (0×0) matrix.
     // TIP: use member-initialiser lists (the `: rows_(0), ...` syntax), not
     //      assignments inside the body. It's faster and required for const members.
-    Matrix();
+    Matrix()
+        : rows_ { 0 }, cols_ { 0 }
+        {
+        }
 
     // Construct a rows×cols matrix. All elements should be initialised to 0.
     // CONCEPT: this is where you allocate heap memory. Use 'new T[...]' here
     //          (just this once, so you understand what smart pointers replace).
-    Matrix(size_t rows, size_t cols);
+    Matrix(size_t rows, size_t cols)
+        : rows_ { rows }, cols_ {cols}
+        {
+        }
 
     // Construct and fill every element with 'fill_value'.
     Matrix(size_t rows, size_t cols, T fill_value);
@@ -128,7 +134,10 @@ public:
     void fill(T value);
 
     // Print a human-readable representation to stdout (handy for debugging).
-    void print(const std::string& label = "") const;
+    void print(const std::string& label = "") const {
+        std::cout << label << std::endl;
+        std::cout << "rows: " << rows_ << " cols: " << cols_ << std::endl;
+    }
 
 
     // -------------------------------------------------------------------------
