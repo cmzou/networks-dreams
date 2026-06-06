@@ -29,7 +29,7 @@ public:
     // TIP: use member-initialiser lists (the `: rows_(0), ...` syntax), not
     //      assignments inside the body. It's faster and required for const members.
     Matrix()
-        : rows_ { 0 }, cols_ { 0 }
+        : Matrix{ 0, 0 }
         {
         }
 
